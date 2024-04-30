@@ -65,12 +65,14 @@
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6">
-                       <img src="images/map 1.png" alt="2">
+                       <img src="images/map2.png" alt="2">
                     </div>
                     <div class="col-lg-6">
                         <div class="p-5">
-                            <h2 class="display-4">We salute you!</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                            <h2 class="display-4">Chicago Homicides</h2>
+<p><b>The problem:</b> Show the spatial distribution of the density of homicides (per square mile) in Chicago by police district.</p>
+<p><b>The Plan:</b> I needed to convert the UTM coordinate system to best display the chicago area so I looked up the UTM zone for chicago which is NAD1983 UTM Zone 16N and changed the map to fit that using the project tool and tweaking the coordinate systems tab of the maps. I selected only the crimes involving homicide by using select by attribute, then I used the summarize tool to get the frequencies of homicides in each district. I then joined the created frequency table with the district map using the district variable as a joiner. I added the square miles column to the table using calculate geometry then calculated the density using the calculate field tool. Finally I used the frequency and square miles area fields to create a choropleth map to show frequency density in each district.</p>
+<p><b>What I learned in GIS:</b> I learned how to join 2 tables’ data together, as well as summarizing and adding data layers to the tables and making new values such as coding x over y statistics like population density.</p>
                         </div>
                     </div>
                 </div>
